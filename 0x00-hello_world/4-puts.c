@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - end with the value zero
+ * main - programming is like building a multilingual puzzle
  * Return: Return 0
  */
 
