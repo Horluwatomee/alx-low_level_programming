@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - programming is like building a multilingual puzzle
- * Return: Return 0
+ *main - Entry point
+ *Return: Return 0
  */
 
 int main(void)
