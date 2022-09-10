@@ -4,18 +4,14 @@
  * main - Entry point
  *
  * Return: Always 0 (success)
- *
  */
 
 int main(void)
 {
-	char abc = 'a';
-	while (abc <= 'z')
+	char abc;
 
-	{
+	for (abc = 'a'; abc <= 'z'; abc++)
 		putchar(abc);
-		abc++;
-	}
 	putchar('\n');
 	return (0);
 }
