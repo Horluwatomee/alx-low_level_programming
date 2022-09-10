@@ -19,7 +19,7 @@ int main(void)
 	for (ABC = 'A'; ABC <= 'Z'; ABC++)
 	{
 		putchar(ABC);
-		putchar('\n);
+		putchar('\n');
 	}
 	return (0);
 }
