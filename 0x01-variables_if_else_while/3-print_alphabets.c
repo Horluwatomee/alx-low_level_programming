@@ -12,9 +12,9 @@ int main(void)
 	char abc;
 	char ABC;
 
-	for (abc = 'a'; ABC <= 'Z'; abc++)
+	for (abc = 'a'; abc <= 'z'; abc++)
 	{
-		putchar (abc);
+		putchar(abc);
 	}
 	for (ABC = 'A'; ABC <= 'Z'; ABC++)
 	{
