@@ -21,7 +21,7 @@ int main(void)
 			d3 = d2 + 1;
 			do {
 				putchar(d1 + '0');
-				putchar(d2 + '0');	
+				putchar(d2 + '0');
 				putchar(d3 + '0');
 				if (d1 != 7)
 				{
