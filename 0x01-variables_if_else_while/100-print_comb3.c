@@ -15,13 +15,9 @@ int main(void)
 	for (d1 = 0; d1 <= 9; d1++)
 	{
 		putchar(d1 + '0');
-	}
 	for (d2 = 0; d2 <= 9; d2++)
-	{
 		putchar(d2 + '0');
-	}
 	if (d1 == 9 && d2 < 9)
-	{
 		putchar(',');
 		putchar(' ');
 	}
