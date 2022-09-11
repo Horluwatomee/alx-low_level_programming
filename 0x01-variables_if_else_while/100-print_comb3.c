@@ -12,7 +12,7 @@ int main(void)
 
 	int d2;
 
-	for (d1 = 0; d1 <= 9; d1++)
+	for (d1 = 0; d1 < 9; d1++)
 	{
 		d2 = d1 + 1;
 	do {
@@ -24,8 +24,7 @@ int main(void)
 			putchar(' ');
 		}
 		d2++;
-	}
-		while (d2 < 10);
+	} while (d2 < 10);
 	}
 	putchar('\n');
 	return (0);
