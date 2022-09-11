@@ -14,12 +14,18 @@ int main(void)
 
 	for (d1 = 0; d1 <= 9; d1++)
 	{
+		d2 = d1 + 1;
+	do {
 		putchar(d1 + '0');
-	for (d2 = 0; d2 <= 9; d2++)
 		putchar(d2 + '0');
-	if (d1 == 9 && d2 < 9)
-		putchar(',');
-		putchar(' ');
+		if (d1 < 8)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		d2++;
+	}
+		while (d2 < 10);
 	}
 	putchar('\n');
 	return (0);
