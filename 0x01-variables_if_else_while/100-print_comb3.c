@@ -19,12 +19,9 @@ int main(void)
 	for (d2 = 0; d2 <= 9; d2++)
 	{
 		putchar(d2 + '0');
-
-	if (d1 == 9)
-		continue;
-	if (d2 < 9)
-		continue;
-	
+	}
+	if (d1 == 9 && d2 < 9)
+	{
 		putchar(',');
 		putchar(' ');
 	}
