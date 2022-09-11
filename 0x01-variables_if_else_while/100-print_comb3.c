@@ -20,7 +20,9 @@ int main(void)
 	{
 		putchar(d2 + '0');
 
-	if (d1 == 9 && d2 == 9)
+	if (d1 == 9)
+		continue;
+	if (d2 == 9)
 		continue;
 	
 		putchar(',');
