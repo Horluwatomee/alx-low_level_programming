@@ -22,7 +22,7 @@ int main(void)
 
 	if (d1 == 9)
 		continue;
-	if (d2 == 9)
+	if (d2 < 9)
 		continue;
 	
 		putchar(',');
