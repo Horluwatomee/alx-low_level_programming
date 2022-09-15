@@ -2,9 +2,6 @@
 
 /**
 * main - causes an infinite loop
-* Incoming loop :(
-* infinite loop avoided \o/
-*
 * Return: 0
 */
 
