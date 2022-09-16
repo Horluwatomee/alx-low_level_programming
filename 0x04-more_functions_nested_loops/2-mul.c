@@ -1,20 +1,18 @@
 #include "main.h"
 
 /**
- * checks for a digit (0 through 9).
- * @c: checks for digits
- * Return: 1 if c is a digit, 0 if otherwise
+ * mul - multiplies two integers
+ * @a: int to be multiplied to b
+ * @b: int to be multiplied to a
+ * Return: the result of the operation
  */
 
-int _isdigit(int c)
+int mul(int a, int b)
 {
-	if (int c >= 0 && int c <= 9)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
 
+	int c;
+
+	c = a * b;
+	return (c);
 }
+
