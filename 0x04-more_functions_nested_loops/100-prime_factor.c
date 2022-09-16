@@ -20,7 +20,7 @@ int main(void)
 
 	while (n % 2 == 0)
 	{
-		max = 2;
+i		max = 2;
 		n /= 2;
 	}
 
