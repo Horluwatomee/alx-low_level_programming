@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * *_strcpy -  copies the string pointed to by src
- * @char *dest: is printed
- * @char *src: points dest
+ * *_strcpy - copies the string pointed to by src
+ * @dest: is printed
+ * @src: points dest
  *
  * Return: dest
  */
