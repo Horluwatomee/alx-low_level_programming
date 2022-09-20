@@ -1,4 +1,6 @@
-#include <stdio>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * main - generates randon vlues for 101 crackme
@@ -8,7 +10,8 @@
  */
 int main(void)
 {
-	int r = 0; c = 0;
+	int r = 0;
+	int c = 0;
 	time_t t;
 
 	srand((unsigned int) time(&t));
