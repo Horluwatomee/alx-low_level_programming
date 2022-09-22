@@ -6,7 +6,7 @@
  * @src: the string to be appended
  * @n: the max length of characters copied
  *
- * Return: 0
+ * Return: dest
  */
 
 char *_strncpy(char *dest, char *src, int n)
