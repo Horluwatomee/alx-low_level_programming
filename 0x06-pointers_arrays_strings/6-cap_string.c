@@ -1,38 +1,33 @@
 #include "main.h"
 
 /**
- * cap_string - function that capitalizese the words in a string
- * @*: capitalize the first word in a string
+ * cap_string - capitalizes the words in a string
+ * @s: string to modify
  *
- * Return: 0
+ * Return: the resulting string s
  */
 
-char *cap_string(char *)
+char *cap_string(char *s)
 {
-	char str[MAX] = {0};
-	int i;
+	int i, j;
 
-	for (i = 0; str[i] != '\0'; i++)
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}'};
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (i == 0)
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
+
+		for (j = 0; j < 13; j++)
 		{
-			if ((str[i] >= 'a' && str[i] <= 'z'))
-				str[i] = str[i] - 32;
-			continue;
-		}
-		if (str[i] == ' ')
-		{
-			++1;
-			if (str[i] >= 'a' && str[i] <= 'z')
+			if (s[i] == spe[j])
 			{
-				str[i] = str[i] - 32;
-				continue;
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+				{
+					s[i + 1] -= 32;
+				}
 			}
-		}
-		else
-		{
-			if (str[i] >= 'A' && str[i] <= 'Z')
-				str[i] = str[i] + 32;
 		}
 	}
 	return (0);
