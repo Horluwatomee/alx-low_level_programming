@@ -5,7 +5,7 @@
  * print_buffer - function that prints a buffer.
  * print the content of size bytes of the buffer pointed by b
  * output should print 10 bytes per line
- * Each line starts with the position of the first byte 
+ * Each line starts with the position of the first byte
  * of the line in hexadecimal (8 chars), starting with 0
  * Each line shows the hexadecimal content (2 chars) of the buffer,
  * 2 bytes at a time, separated by a space
@@ -23,7 +23,7 @@ void print_buffer(char *b, int size)
 
 	if (size < 0)
 	{
-		printf('\n');
+		printf("\n");
 		return;
 	}
 	while (i < size)
@@ -48,7 +48,7 @@ void print_buffer(char *b, int size)
 			else
 				printf(".");
 		}
-		printf('\n');
+		printf("\n");
 		i += 10;
 	}
 }
