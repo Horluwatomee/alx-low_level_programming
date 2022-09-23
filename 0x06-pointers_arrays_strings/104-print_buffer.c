@@ -11,7 +11,7 @@
  * 2 bytes at a time, separated by a space
  * Each line ends with a new line \n
  * If size is 0 or less, the output should be a new line only \n
- * @b: The pointer of the buffer
+ * @b: points to the buffer
  * @size: the size of buffer to be printed
  *
  * Return: 0
@@ -37,8 +37,7 @@ void print_buffer(char *b, int size)
 			else
 			{
 				while (++j <= i + 10)
-					printf(" ");
-				printf(" ");
+					printf("  ");
 			}
 		}
 		for (j = i; j < i + 9 && j < size; j++)
