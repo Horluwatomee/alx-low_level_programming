@@ -3,16 +3,15 @@
 
 /**
  * _strcmp - Function that compares two strings
- * @s1: The 1st string
- * @s2: The 2nd string to be compared
+ * @s1: The first string to compare
+ * @s2: The second string to be compared
  *
- * Return: 0
+ * Return: less than 0 if s1 is less than s2, 0 if they`re equal,
+ * more than 0 if s1 is greater than s2
  */
 
 int _strcmp(char *s1, char *s2)
 {
-	int i;
-
 	while (*s1 == *s2)
 	{
 		if (*s1 == '\0')
