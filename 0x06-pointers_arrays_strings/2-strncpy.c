@@ -7,7 +7,7 @@
  * @src: the string to be appended
  * @n: the max length of characters copied
  *
- * Return: dest
+ * Return: pointer to the resulting string
  */
 
 char *_strncpy(char *dest, char *src, int n)
@@ -16,7 +16,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	i = 0;
 
-	while (i< n && src[i] != '\0')
+	while (src[i] != '\0' && i < n)
 	{
 		dest[i] = src[i];
 		i++;
