@@ -1,175 +1,54 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
- * first_func - 1st function needed to run print_buffer
-
- * @b: buffer
-
- * @k: int
-
- * @l: int
-
- * @i: int
-
+ * print_buffer - function that prints a buffer.
+ * print the content of size bytes of the buffer pointed by b
+ * output should print 10 bytes per line
+ * Each line starts with the position of the first byte 
+ * of the line in hexadecimal (8 chars), starting with 0
+ * Each line shows the hexadecimal content (2 chars) of the buffer,
+ * 2 bytes at a time, separated by a space
+ * Each line ends with a new line \n
+ * If size is 0 or less, the output should be a new line only \n
+ * @b: The pointer of the buffer
+ * @size: the size of buffer to be printed
  *
-
- * Return: void
-
- */
-
-void first_func(char *b, int k, int l, int i)
-
-{
-
-k = (i / 10) * 10;
-
-for (l = k; l <= i; l++)
-
-{
-
-if (b[l] >= 32 && b[l] <= 126)
-
-putchar(b[l]);
-
-else
-
-putchar('.');
-
-}
-
-
-
-putchar(10);
-
-printf("%08x: ", i + 1);
-
-}
-
-
-
-/**
-
- * sec_func - second function needed to run print_buffer
-
- * @b: buffer
-
- * @l: int
-
- * @l_phase: int
-
- * @size: int
-
- */
-
-void sec_func(char *b, int l, int l_phase, int size)
-
-{
-
-for (l = l_phase; l <= (l_phase + ((l_phase + 9) - size)); l++)
-
-{
-
-putchar(' ');
-
-putchar(' ');
-
-}
-
-putchar(' ');
-
-putchar(' ');
-
-for (l = l_phase; l < size; l++)
-
-{
-
-if (b[l] >= 32 && b[l] <= 126)
-
-putchar(b[l]);
-
-else
-
-putchar('.');
-
-}
-
-}
-
-
-
-/**
-
- * print_buffer - prints buffer
-
- * @b: buffer
-
- * @size: buffer size
-
- *
-
- * Return: void
-
+ * Return: 0
  */
 
 void print_buffer(char *b, int size)
-
 {
+	int i = 0, j;
 
-int i, j, k, l, z;
-
-int l_phase;
-
-
-
-l_phase = z = (size / 10) * 10;
-
-j = 1;
-
-l = k = 0;
-
-
-
-for (i = 0; i < size; i++)
-
-{
-
-if (i == 0)
-
-printf("%08x: ", i);
-
-printf("%02x", b[i]);
-
-
-
-if (!(j % 2))
-
-putchar(' ');
-
-
-
-if (((i % 10 == 9) && i > 0))
-
-{
-
-first_func(b, k, l, i);
-
+	if (size < 0)
+	{
+		printf('\n');
+		return;
+	}
+	while (i < size)
+	{
+		if (i % 10 == 0)
+			printf("%08x: ", i);
+		for (j = i; j < i + 9; j += 2)
+		{
+			if ((j < size) && ((j + 1) < size))
+				printf("%02x%02x: ", b[j], b[j + 1]);
+			else
+			{
+				while (++j <= i + 10)
+					printf(" ");
+				printf(" ");
+			}
+		}
+		for (j = i; j < i + 9 && j < size; j++)
+		{
+			if (b[j] >= 32 && b[j] <= 126)
+				printf("%c", b[j]);
+			else
+				printf(".");
+		}
+		printf('\n');
+		i += 10;
+	}
 }
-
-else if (i == size - 1)
-
-{
-
-sec_func(b, l, l_phase, size);
-
-}
-
-j++;
-
-}
-
-putchar('\n');
-
-if (size == 0)
-
-putchar('\n');
-
