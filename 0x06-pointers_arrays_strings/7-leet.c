@@ -2,25 +2,29 @@
 #include <stdio.h>
 
 /**
- * leet - function that encodes a string into 1337.
- * Replace letters a and A by 4
- * Replace letters e and E by 3
- * Replace letters o and O by 0
- * Replace letters t and T by 7
- * Replace letters l and L by 1
- * @*: converts original string into 43071
+ * leet - function that encodes a string into 1337
+ * @s: string to be encoded
  *
- * Return: 0
+ * Return: the resulting string
  */
 
-char *leet(char *)
+char *leet(char *s)
 {
-	 int i = 0;
+	 int i, j;
 
-	 while (str[i] != '\0')
+	 char *a = "aAeEoOtTlL";
+
+	 char *b = "4433007711";
+
+	 for (i = 0 ; s[i] != '\0'; i++)
 	 {
-		 str[i] = str[i] - 30;
-		 i++;
+		 for (j = 0; j < 10; j++)
+		 {
+			 if (s[i] == a[j])
+			 {
+				 s[i] = b[j];
+			 }
+		 }
 	 }
-	 return (str);
+	 return (s);
 }
