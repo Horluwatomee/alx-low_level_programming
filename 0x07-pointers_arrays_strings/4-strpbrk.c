@@ -6,7 +6,7 @@
  * @s: the string s in bytes
  * @accept:containing theset of bytes to be searched
  *
- * Result: pointer to the byte in s that matches one of the bytes in accept,
+ * Return: pointer to the byte in s that matches one of the bytes in accept,
  * or NULL if no such byte is found
  */
 
