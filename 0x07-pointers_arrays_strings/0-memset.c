@@ -3,7 +3,7 @@
 /**
  * _memset - function that fills memory with a constant byte.
  * @s: memory area to be filled
- * @b: Constant byte size to be copied
+ * @b: constant byte size to be copied
  * @n: integer
  *
  * Result: s (pointer to the memory area)
