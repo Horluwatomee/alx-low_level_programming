@@ -6,7 +6,7 @@
  * @b: constant byte size to be copied
  * @n: integer
  *
- * Result: s (pointer to the memory area)
+ * Result: pointer to the memory area s
  */
 
 char *_memset(char *s, char b, unsigned int n)
