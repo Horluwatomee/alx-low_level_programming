@@ -1,4 +1,4 @@
-#inlcude "main.h"
+#include "main.h"
 
 /**
  * wildcmp - function that compares 2 strings and returns 1 if identical
@@ -17,11 +17,11 @@ int wildcmp(char *s1, char *s2)
 	}
 	if (*s2 == *s1)
 	{
-		return (*s1 == != '\0' && wildcmp(s1 + 1, s2 + 1));
+		return (*s1 != '\0' && wildcmp(s1 + 1, s2 + 1));
 	}
 	else if (*s2 == '*')
 	{
-		return ((s1, s2 + 1) || (s1 != '\0' && wildcmp(s1 + 1, s2)))
+		return ((s1, s2 + 1) || (*s1 != '\0' && wildcmp(s1 + 1, s2)));
 	}
 	return (0);
 }
