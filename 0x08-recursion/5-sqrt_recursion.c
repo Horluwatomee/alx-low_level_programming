@@ -1,5 +1,7 @@
 #include "main.h"
 
+int natural_sqrt(int n, int x);
+
 /**
  * _sqrt_recursion - function that return a natural sqrt of a num
  * @n: the number
@@ -9,31 +11,28 @@
 
 int _sqrt_recursion(int n)
 {
-	if (n == 1; n == 0)
-	{
-		return (n);
-		return (_sqrt(0, n));
-	}
+	if (n < 0)
+		return (-1);
+		return (natural_sqrt(0, n));
 }
 
 /**
- * _sqrt - returns the sqrt of a num
+ * natural_sqrt - recurses the sqrt of a num
  * @n: test number
  * @x: squared number
  *
  * Return: sqrt of n
  */
 
-int _sqrt(int n, int x)
-
+int natural_sqrt(int n, int x)
 {
-	if (n = x / 2)
+	if (x * x > n)
 	{
 		return (-1);
 	}
-	else if ( n * n == x)
+	else if (x * x == n)
 	{
-		return (n);
+		return (x);
 	}
-	return _sqrt(n + 1, x);
+	return (natural_sqrt(n, x + 1));
 }
