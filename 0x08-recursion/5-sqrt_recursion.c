@@ -12,8 +12,10 @@ int natural_sqrt(int n, int x);
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
+	{
 		return (-1);
-		return (natural_sqrt(0, n));
+	}
+		return (natural_sqrt(n, 0));
 }
 
 /**
