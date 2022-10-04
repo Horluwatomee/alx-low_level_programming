@@ -43,7 +43,7 @@ int count_words(char *str)
 
 void look_pos(char *str, int *pos)
 {
-	int flagw = 1, int k = 0, int i = 0;
+	int flagw = 1, k = 0, i = 0;
 
 	while (*(str + i))
 	{
