@@ -12,11 +12,7 @@
 
 int count_words(char *str)
 {
-	int words = 0;
-
-	int flagbs = 0;
-
-	int i = 0;
+	int words = 0, flagbs = 0, i = 0;
 
 	while (*(str + i))
 	{
@@ -47,11 +43,7 @@ int count_words(char *str)
 
 void look_pos(char *str, int *pos)
 {
-	int flagw = 1;
-
-	int k = 0;
-
-	int i = 0;
+	int flagw = 1, int k = 0, int i = 0;
 
 	while (*(str + i))
 	{
@@ -90,11 +82,7 @@ void look_pos(char *str, int *pos)
 
 int print_words(int *pos, char **m, char *str, int words)
 {
-	int b = 0;
-
-	int b1 = 0;
-
-	int l = 0;
+	int b = 0, b1 = 0, l = 0;
 
 	for (b = 0; b < words; b++)
 	{
@@ -128,11 +116,9 @@ int print_words(int *pos, char **m, char *str, int words)
 
 char **strtow(char *str)
 {
-	int words;
+	int words, *pos = NULL;
 
 	char **m = NULL;
-
-	int *pos = NULL;
 
 	if (str == NULL || *str == 0)
 		return (NULL);
