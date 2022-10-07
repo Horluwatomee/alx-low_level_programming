@@ -6,7 +6,7 @@
  * malloc_checked - function that allocates memory using malloc
  * @b: integer to be allocated a memory
  *
- * Returns: pointer to the memory allocated
+ * Return: pointer to the memory allocated
  * or if NULL, exit 98
  */
 
