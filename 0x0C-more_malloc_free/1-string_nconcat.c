@@ -7,7 +7,7 @@
  * @s2: second string to be copied
  * @n: amount of bytes allocated to the memory
  *
- * Return: pointer to the allocated memory.
+ * Return: s pointer to the allocated memory.
  * if malloc fails, status value is equal to 98.
  */
 
@@ -29,16 +29,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 	for (ts2 = 0; s2[ts2] != '\0'; ts2++)
 		;
+
 	if (n > ts2)
-	{
 		n = ts2;
-	}
+
 	ts = ts1 + n;
+
 	s = malloc(ts + 1);
 	if (s == NULL)
 	{
 		return (NULL);
 	}
+
 	for (i = 0; i < ts; i++)
 		if (i < ts1)
 		{
@@ -49,5 +51,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			s[i] = s2[i - ts1];
 			s[i] = '\0';
 		}
+
 	return (s);
 }
