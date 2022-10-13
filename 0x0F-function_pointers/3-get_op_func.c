@@ -4,9 +4,8 @@
 #include <stddef.h>
 
 /**
- * get_op_func - function pointer that selects the correct function to perform
- * the operation asked by the user
- * @s: the operator given by the user
+ * get_op_func - function pointer that selects the correct operation function
+ * @s: the operator passed as an argument to the program
  *
  * Return: pointer to the function that corresponds to the
  * operator given as a parameter
