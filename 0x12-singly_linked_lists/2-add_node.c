@@ -14,21 +14,24 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
-	unsigned int copy_len = 0;
-	char *new_str;
+	int len;
+	char *dup_str;
 
-	if (!head)
-		return (0);
 	new_node = malloc(sizeof(list_t));
-	if (new_node == NULL)
-		return (0);
+	if (!new_node)
+		return (NULL);
 
-	for (copy_len = 0; str[copy_len] != '\0', copy_len++;)
-	{}
-	new_str = strdup(str);
-	new_node->str = new_str;
-	new_node->len = copy_len;
+	dup_str = strdup(str);
+	if (!dup_str)
+	{
+		free(new_node);
+		return (NULL);
+	}
+	for (len = 0; str[len]; len++)
+		new_node->str = dup_str;
+	new_node->len = len;
 	new_node->next = *head;
 	*head = new_node;
-	return (*head);
+	return (new_node);
+
 }
