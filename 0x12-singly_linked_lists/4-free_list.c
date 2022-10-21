@@ -3,10 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*
- * free_list - function that frees a list_t list
+/**
+ * free_list - function that frees a list_t list.
  * @head: pointer address to be freed
- * 
+ *
  * Return: nothing
  */
 
@@ -21,5 +21,4 @@ void free_list(list_t *head)
 		free(head);
 		head = temp;
 	}
-}
 }
