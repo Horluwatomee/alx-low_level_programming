@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void main(void) __attribute__ ((constructor));
+void_attribute_((constructor))main(void);
 
 /**
  * main - prints a statement before execuring the main function
