@@ -1,16 +1,15 @@
-#include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-void_attribute_((constructor))main(void);
+void_attribute_((constructor))hare(void);
 
 /**
- * main - prints a statement before execuring the main function
+ * hare - prints a statement before execuring the main function
  * function is executed
  */
 
-void main(void)
+void hare(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
