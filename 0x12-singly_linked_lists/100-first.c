@@ -1,11 +1,9 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-void_attribute_((constructor))hare(void);
+void hare(void) __attribute__ ((constructor));
 
 /**
- * hare - prints a statement before execuring the main function
+ * hare - prints a statement before executing the main function
  * function is executed
  */
 
