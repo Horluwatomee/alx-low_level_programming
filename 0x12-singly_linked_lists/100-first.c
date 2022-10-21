@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+void main(void) __attribute__ ((constructor));
+
 /**
  * main - prints a statement before execuring the main function
  * function is executed
