@@ -1,53 +1,40 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - function that inserts a new node at a given position
- * @head: head of a structure
- * @idx:index of the list where the new node should be added
- * @n: new node to be added
+ * insert_nodeint_at_index - adds a new node to a linked list
+ * at a given position
+ * @head : pointer to the head of the list
+ * @idx  : index of the list where the new node will be added
+ * (indices start at 0)
+ * @n    : value for the new node to be added
  *
- * Return: address of the new node, or NULL if it failed
+ * Return: pointer to the new node, or NULL - if function fails
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new_node, *current;
-	unsigned int index;
+	listint_t *new, *temp = *head;
+	unsigned int node;
 
-	current = *head;
-	/*place first node at current*/
+	new = malloc(sizeof(listint_t));
 
-	new_node = malloc(sizeof(listint_t));
-	if (*head == NULL && idx != 0) || new_node == NULL)
+	if (new == NULL)
 		return (NULL);
 
-	new_node->n = n
-		/* add new element to the new node*/
+	new->n = n;
 
-		/*iterate list to node position idx - 2)*/
-		for (index = 0; head != NULL && index < idx - 1; index++)
-		{
-			current = current->next;
-			if (current == NULL)
-				return (NULL);
-		}
 	if (idx == 0)
 	{
-		/*first node will be moved to second node*/
-		new_node->next = *head;
-		/*new node will be placed a s the first node*/
-		*head = new_node;
+		new->next = temp;
+		*head = new;
+		return (new);
 	}
-	else if (current->next) /* if the index where a new node is to be added is not 0*/
+	for (node = 0; node < (idx - 1); node++)
 	{
-		new_node->next = current->next; /*place current node after the new node*/
-		current->next = new_node;
-		/*set new node at the index idx*/
+		if (temp == NULL || temp->next == NULL)
+			return (NULL);
+		temp = temp->next;
 	}
-	else /*if node position is not present in the list*/
-	{
-		new_node->next = NULL; /*setting next address a sNULL, indicates last node*/
-		current->next = new_node; /*set new node at the last position in the list*/
-	}
-	return (new_node);
+	new->next = temp->next;
+	temp->next = new;
 }
