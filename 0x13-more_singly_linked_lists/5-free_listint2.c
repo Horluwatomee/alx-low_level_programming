@@ -4,6 +4,7 @@
  * free_listint2 - function that frees listint_t list
  * @head: head of the structure
  *
+ * Return: void
  */
 
 void free_listint2(listint_t **head)
@@ -12,12 +13,12 @@ void free_listint2(listint_t **head)
 
 	if (!head)
 		return;
-	temp = *head;
 
 	while (*head)
 	{
-		temp = (*head)->next;
-		free(head);
-		*head = temp;
+		temp = *head;
+		*head = (*head)->next;
+		free(temp);
 	}
+	head = NULL;
 }
