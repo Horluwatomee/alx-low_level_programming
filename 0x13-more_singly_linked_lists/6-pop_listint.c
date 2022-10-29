@@ -11,17 +11,16 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *temp;
-	int head_value = 0;
+	int n;
 
-		if (head)
-			temp = *head;
+	temp = *head;
 	/*Assign the temp reference*/
 
-	if (temp)
-	{
-		head_value = (*head)->n;
-		*head = (*head)->next;
-		free(temp);
-	}
-	return (head_value);
+	if (temp == NULL)
+		return (0);
+
+	*head = temp->next;
+	n = temp->n;
+	free(temp);
+	return (n);
 }
