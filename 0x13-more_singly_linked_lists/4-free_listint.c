@@ -4,6 +4,7 @@
  * free_listint - function that frees the listint_t list
  * @head: head of the listint_t list
  *
+ * Return: void
  */
 
 void free_listint(listint_t *head)
@@ -14,6 +15,6 @@ void free_listint(listint_t *head)
 	{
 		temp = head;
 		head = head->next;
+		free(temp);
 	}
-	free(temp);
 }
